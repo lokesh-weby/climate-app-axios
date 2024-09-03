@@ -36,7 +36,7 @@ function App() {
       var location=cityname
       Axios.get('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=986e8ad96c8f4bc8f2c6169047f90d6b&units=metric')
       .then(res=>(  console.log(res.data)||setTemp(res.data['main']['temp'])  || setDesc(res.data['weather']['0']['description'])  || setCity(res.data['name']) || setCountry(res.data['sys']['country']) || setIcon(res.data['weather']['0']['icon']) || setHumidity(res.data['main']['humidity'])
-    || setWind(res.data['wind']['speed']) || setLongitude(res.data['coord']['lon']) || setLatitude(res.data['coord']['lat']))).catch(e=>alert(e))
+    || setWind(res.data['wind']['speed']) || setLongitude(res.data['coord']['lon']) || setLatitude(res.data['coord']['lat']))).catch(e=>alert('Sorry you entered a city is not found..'))
     
     
     }
